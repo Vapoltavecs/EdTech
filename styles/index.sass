@@ -1,0 +1,144 @@
+@font-face
+    font-family: "Century Gothic"
+    src: url('../fonts/centurygothic/centurygothic.ttf')
+    font-weight: 400
+
+@font-face
+    font-family: "Century Gothic"
+    src: url('../fonts/centurygothic/centurygothic_bold.ttf')
+    font-weight: 700
+
+body
+    font-family: "Century Gothic"
+    background: #D1DBFF
+
+%text
+    font-weight: 400
+    font-size: 1.56em
+    line-height: 31px
+    letter-spacing: 0.05em
+    color: #0A1C26
+%button
+    font-weight: 700
+    font-size: 30px
+    line-height: 37px
+    letter-spacing: 0.05em
+    color: #FBFFFF
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
+    text-decoration: none
+    background: linear-gradient(94.59deg, #DDCCFF 0%, #B2C3FF 99.99%, #D1DBFF 100%)
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.05)
+    padding: 28px 42px
+    transition: all .3s
+    border-radius: 10px
+    &:hover
+        background: linear-gradient(94.59deg, #6C22FF 0%, #5B7FFF 99.99%, #D1DBFF 100%)
+        
+   
+
+.container
+    max-width: 1395px
+    margin: 0 auto
+
+
+.header
+    padding: 11px 0px
+    background: rgba(255, 255, 255, 0.4)
+    box-shadow: 0px 1px 7px rgba(255, 255, 255, 0.25)
+    backdrop-filter: blur(15px)
+
+    &__wrapper
+        display: flex
+    
+        align-center: center
+        justify-content: space-between
+    
+    &__menu
+        list-style: none
+        display: flex
+        margin-left: 70px
+        &-item
+            margin: 0px 50px   
+            
+                
+
+ 
+        &-link
+            color: black
+            font-weight: 400
+            font-size: 1.5em
+            line-height: 29px
+            letter-spacing: 0.05em
+            text-decoration: none
+            &:hover
+                border: 1px solid
+                border-image-source: linear-gradient(94.59deg, #AF87FF 0%, #5B7FFF 99.99%, #D1DBFF 100%)
+
+
+    &__nav
+        display: flex
+        align-items: center
+    &__contacts
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &-pretitle
+            display: block
+            font-weight: 400
+            font-size: 18px
+            line-height: 22px
+            letter-spacing: 0.05em
+            color: #5E5E5E
+            text-decoration: none
+            
+        &-title
+            display: block
+            color: black
+            font-weight: 400
+            font-size: 1.5em
+            line-height: 29px
+            letter-spacing: 0.05em
+            text-decoration: none
+    &__main
+        display: flex
+        align-items: center
+
+.main
+    background-image: url('../images/backgrounds/1.jpg')
+    & main
+        padding: 100px 0px 115px
+    &__opportunities
+        list-style: none
+        margin-top: 45px
+        &-item
+            position: relative
+            margin-top: 20px
+            @extend %text
+            margin-left: 25px
+            &::before
+                content: ''
+                width: 12px
+                height: 12px
+                left: -20px
+                top: 50%
+                transform: translateY(-50%)
+                background: linear-gradient(94.59deg, #AF87FF 0%, #5B7FFF 99.99%, #D1DBFF 100%)
+                box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1)
+                border-radius: 10px
+                position: absolute
+   
+    &__title
+        font-style: normal
+        font-weight: 700
+        font-size: 70px
+        line-height: 86px
+        letter-spacing: 0.05em
+        color: #FBFFFF
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        max-width: 580px
+    &__button
+        @extend %button
+        margin-top: 65px
+        display: inline-block
+        transition: all .3s
+        
