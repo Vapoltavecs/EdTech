@@ -28,20 +28,49 @@
                             <ul class="header__menu">
                                 <li class="header__menu-item">
                                     <a href="/" class="header__menu-link">Каталог курсов</a>
+                                    <ul class="dropdown">
+                                        <li>
+                                            <a href="">Юрист по работе с инфобизнесоми онлайн школами</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Юрист в сфере интеллектуальной
+                                                собственности</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Legal writing and oral presentation</a>
+                                        </li>
+                                    </ul>
                                 </li>
+
                                 <li class="header__menu-item">
                                     <a href="/" class="header__menu-link">О нас</a>
                                 </li>
                             </ul>
                         </nav>
                     </div>
-                    <div class="header__contacts">
-                        <a href="/" class="header__contacts-pretitle">Задай нам вопрос</a>
-                        <a href="/" class="header__contacts-title">email@email.com</a>
+                    <div class="header-right-wrap">
+                        <div class="header__contacts">
+                            <a href="/" class="header__contacts-pretitle">Задай нам вопрос</a>
+                            <a href="/" class="header__contacts-title">email@email.com</a>
+                        </div>
+                        <div class="burger">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
+        <div class="header__menu-mobile">
+            <ul>
+                <li><a href=""> Юрист по работе с инфобизнесом и онлайн школами</a></li>
+                <li><a href="">Юрист в сфере интеллектуальной собственности</a></li>
+                <li><a href="">Legal writing and oral presentation
+                        (на русском языке)</a></li>
+                <li><a href="">О нас</a></li>
+            </ul>
+        </div>
         <div class="container">
             <main>
                 <h1 class="main__title">
@@ -375,7 +404,7 @@
                     </ul>
                     <img src="./images/logo.svg" alt="logo" class="footer__logo">
                 </div>
-                <div >
+                <div>
                     <ul class="footer__links">
                         <li>
                             <a href="/">Договор офферты</a>
@@ -486,7 +515,19 @@
     </footer>
 
 
-
+    <div class="cookie-modal">
+        <div class="cookie-modal__content">
+            <div class="container">Мы используем файлы cookie для персонализации сервисов и повышения удобства
+                пользования сайтом. Оставаясь на сайте, вы соглашаетесь с тем, что мы используем <a href="">cookies</a>
+                ,
+                в соответствии с нашей <a href="">Политикой конфиденциальности.</a> Если вы не согласны на их
+                использование,
+                поменяйте
+                настройки браузера.
+            </div>
+        </div>
+        <button class="cookie-modal__btn">Принять</button>
+    </div>
 
     <script type="module">
         import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
@@ -497,7 +538,7 @@
             spaceBetween: 10,
             loop: true,
             breakpoints: {
-                900: {
+                700: {
                     slidesPerView: 3,
                     spaceBetween: -160,
                     watchOverflow: true,
@@ -577,7 +618,7 @@
             }
         })
     </script>
-
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

@@ -17,13 +17,34 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
 .header__wrapper { display: flex; align-center: center; justify-content: space-between; }
 .header__menu { list-style: none; display: flex; margin-left: 70px; }
 .header__menu-item { margin: 0px 50px; }
-.header__menu-link { color: black; font-weight: 400; font-size: 1.5em; line-height: 29px; letter-spacing: 0.05em; text-decoration: none; }
-.header__menu-link:hover { border: 1px solid; border-image-source: linear-gradient(94.59deg, #AF87FF 0%, #5B7FFF 99.99%, #D1DBFF 100%); }
+.header__menu-item:first-child:hover .dropdown { opacity: 1; top: 135px; }
+.header__menu-link { color: black; font-weight: 400; font-size: 1.5em; line-height: 29px; letter-spacing: 0.05em; text-decoration: none; position: relative; }
+.header__menu-link:hover::before { content: ""; width: 100%; height: 1px; bottom: -5px; position: absolute; background: linear-gradient(94.59deg, #AF87FF 0%, #5B7FFF 99.99%, #D1DBFF 100%); }
+.header__menu .dropdown { padding: 30px; position: absolute; background: white; left: 13%; top: 115px; border-radius: 0px 0px 10px 10px; opacity: 0; transition: all 0.3s; }
+.header__menu .dropdown li { margin-top: 20px; max-width: 380px; }
+.header__menu .dropdown li a { text-decoration: none; font-size: 16px; line-height: 20px; letter-spacing: 0.05em; color: #0A1C26; transition: all 0.3s; }
+.header__menu .dropdown li a:hover { background: linear-gradient(94.59deg, #AF87FF 0%, #5B7FFF 99.99%, #D1DBFF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; }
+.header__menu .dropdown li:first-child { margin-top: 0; }
 .header__nav { display: flex; align-items: center; }
 .header__contacts { display: flex; flex-direction: column; justify-content: center; }
 .header__contacts-pretitle { display: block; font-weight: 400; font-size: 18px; line-height: 22px; letter-spacing: 0.05em; color: #5E5E5E; text-decoration: none; }
 .header__contacts-title { display: block; color: black; font-weight: 400; font-size: 1.5em; line-height: 29px; letter-spacing: 0.05em; text-decoration: none; }
 .header__main { display: flex; align-items: center; }
+.header .burger { display: none; cursor: pointer; position: relative; width: 30px; height: 30px; }
+.header .burger div { width: 30px; height: 2px; background: black; position: absolute; left: 0; transition: all 0.3s; }
+.header .burger div:first-child { margin-top: 0; }
+.header .burger div:nth-child(2n) { top: 10px; }
+.header .burger div:nth-child(3n) { top: 20px; }
+.header .burger.active div:nth-child(1n) { transform: rotate(45deg); top: 7px; left: 0px; }
+.header .burger.active div:nth-child(2n) { opacity: 0; transform: none; }
+.header .burger.active div:nth-child(3n) { top: 7px; left: 0px; transform: rotate(-45deg); }
+.header-right-wrap { display: flex; align-items: center; gap: 60px; }
+
+.header__menu-mobile { transform: translateX(-100%); transition: all 0.6s ease-in-out; position: fixed; height: 100%; left: 0; width: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(94.59deg, #AF87FF 0%, #5B7FFF 99.99%, #D1DBFF 100%); z-index: 950; display: none; }
+.header__menu-mobile ul { max-width: 500px; margin: 0 auto; }
+.header__menu-mobile li { font-weight: 700; font-size: 25px; line-height: 31px; text-align: center; letter-spacing: 0.05em; margin-top: 30px; }
+.header__menu-mobile li a { text-decoration: none; color: #FBFFFF; }
+.header__menu-mobile.active { transform: translateX(0%); }
 
 .main { background-image: url("../images/backgrounds/1.png"); background-size: cover; padding-bottom: 250px; }
 .main main { padding: 100px 0px 0px; }
@@ -53,7 +74,7 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
 .program__card-title { font-weight: 700; font-size: 1.875em; text-align: center; letter-spacing: 0.05em; margin-top: 17px; }
 .program__card-content { font-weight: 400; font-size: 1.125em; line-height: 22px; letter-spacing: 0.05em; color: #5E5E5E; margin-top: 20px; max-width: 308px; }
 .program__card-icon { width: 90px; height: 90px; }
-.program__swiper-nav { display: none; }
+.program__swiper-nav { display: none; z-index: 500; }
 .program .swiper-slide { transform: scale(1); }
 .program .swiper-slide::before { display: none; }
 .program .swiper-slide.active { background: linear-gradient(94.81deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 100%); }
@@ -137,7 +158,9 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
   .advantagers__card-content { max-height: 100%; }
   .advantagers__content { max-width: 550px; }
   .advantagers__text { font-size: 18px; line-height: 22px; } }
-@media (max-width: 1250px) { .advantagers__wrapper { flex-direction: column; justify-content: center; }
+@media (max-width: 1250px) { .header__menu-mobile { display: flex; }
+  .burger { display: block !important; }
+  .advantagers__wrapper { flex-direction: column; justify-content: center; }
   .advantagers__cards { max-width: 100%; margin-top: 50px; }
   .advantagers__content { text-align: center; max-width: 100%; max-width: 600px; margin: 0 auto; }
   .advantagers__title { max-width: 440px; margin: 0 auto; line-height: 44px; }
@@ -146,7 +169,7 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
   .company__wrapper { background: none; }
   .program { padding-top: 290px; background-size: cover; background: url("../images/backgrounds/3-mobile.png") left center no-repeat; }
   .program__swiper { width: 100%; max-width: 650px; margin: 0 auto; overflow: hidden; }
-  .program__swiper-nav { display: block; position: absolute; top: 50%; cursor: pointer; }
+  .program__swiper-nav { display: block; position: absolute; top: 55%; cursor: pointer; }
   .program__swiper .swiper__program-next { right: 50px; }
   .program__swiper .swiper__program-prev { left: 50px; }
   .program__card { height: 380px; }
@@ -246,5 +269,14 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
   .footer__contacts-links li:first-child { margin-top: 0; }
   .footer__contacts-links li a { text-decoration: none; color: black; font-weight: 400; font-size: 1em; }
   .footer__contacts { margin-top: 20px; } }
+.cookie-modal { display: none; background-color: white; max-width: 90%; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 100%; box-shadow: 0px 11px 37px rgba(0, 0, 0, 0.18); border-radius: 10px; z-index: 900; padding: 20px 35px; font-size: 14px; line-height: 17px; text-align: center; }
+.cookie-modal__content { text-align: start; }
+.cookie-modal__btn { display: inline-block; margin: 0 auto; margin-top: 15px; background: none; padding: 7px 47px; border: 1px solid #0B63CA; border-radius: 10px; cursor: pointer; }
+.cookie-modal a { color: #0B63CA; text-decoration: none; }
+.cookie-modal.active { display: block; }
+
+@media (max-width: 650px) { .cookie-modal { padding: 20px 30px; }
+  .header__menu-mobile li { font-size: 20px; max-width: 270px; }
+  .header-right-wrap { gap: 20px; } }
 
 /*# sourceMappingURL=index.css.map */
