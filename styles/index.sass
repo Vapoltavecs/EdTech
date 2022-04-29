@@ -35,8 +35,9 @@ body
     padding: 28px 42px
     transition: all .3s
     border-radius: 10px
+    transition: all .3s
     &:hover
-        background-color: linear-gradient(94.59deg, #6C22FF 0%, #5B7FFF 99.99%, #D1DBFF 100%)
+        background: linear-gradient(94.59deg, #6C22FF 0%, #5B7FFF 99.99%, #D1DBFF 100%)
 
 %title
     font-weight: 700
@@ -216,12 +217,13 @@ body
             text-decoration: none
             color: #FBFFFF
     &.active
-        transform: translateX(0%) 
+        transform: translateX(0%)
 
 .main
     background-image: url('../images/backgrounds/1.png')
-    background-size: cover
-    padding-bottom: 250px
+    background-position: 100% top
+    background-repeat: no-repeat
+    padding-bottom: 240px
     & main
         padding: 100px 0px 0px
     &__opportunities
@@ -336,11 +338,12 @@ body
             padding: 20px 15px
             text-align: center
             height: auto
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1)
+
             border-radius: 10px
 
     &__card
         min-height: 370px
+        transition: all .3s
         &-title
             font-weight: 700
             font-size: 1.875em
@@ -358,6 +361,8 @@ body
         &-icon
             width: 90px
             height: 90px
+        &:hover
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1)
 
     &__swiper
         &-nav
@@ -404,8 +409,8 @@ body
 
     &__cards
 
-        margin-top: 85px
-        padding: 50px 0px
+        margin-top: 35px
+        padding: 50px 20px
         &-item
             background: linear-gradient(94.81deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.12) 100%)
             box-shadow: 0px 0px 46px rgba(0, 0, 0, 0.15), 0px 1px 7px rgba(255, 255, 255, 0.25)
@@ -587,6 +592,9 @@ body
         text-align: center
         letter-spacing: 0.05em
         color: #939393
+        a
+            color: #939393
+            text-decoration-color: #939393
 
 .footer
     padding-bottom: 90px
@@ -614,6 +622,13 @@ body
                     line-height: 22px
                     color: rgba(0, 0, 0, 0.7)
                     text-decoration: none
+                    transition: all .3s
+                    &:hover
+                        background: linear-gradient(94.59deg, #AF87FF 0%, #5B7FFF 99.99%, #D1DBFF 100%)
+                        -webkit-background-clip: text
+                        -webkit-text-fill-color: transparent
+                        background-clip: text
+                        text-fill-color: transparent
         &-wrap
             display: flex
             align-items: start
@@ -658,10 +673,12 @@ body
     margin-top: 30px
     display: flex
     align-items: center
+
     &__text
         margin-left: 10px
         font-family: "Montserrat"
         font-weight: 500
+
 .seat
     margin-top: 15px
     display: flex
@@ -719,6 +736,8 @@ body
         &__text
             font-size: 18px
             line-height: 22px
+    .team__info-title
+        font-size: 20px
 
 @media (max-width: 1250px)
     .header__menu-mobile
@@ -930,7 +949,6 @@ body
         &__wrapper
             flex-direction: column
             gap: 30px
-    
 
 @media (max-width: 650px)
     .container

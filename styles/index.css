@@ -6,8 +6,8 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
 
 .main__opportunities-item, .advantagers__text, .courses__subtitle, .courses__card-title, .contacts__text-title, .contacts__text-content { font-weight: 400; font-size: 1.56em; line-height: 31px; letter-spacing: 0.05em; color: #0A1C26; }
 
-.main__button, .advantagers__button, .courses__card-button, .form__button, .footer__button { font-weight: 700; font-size: 1.875em; letter-spacing: 0.05em; color: #FBFFFF; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); text-decoration: none; background: linear-gradient(94.59deg, #DDCCFF 0%, #B2C3FF 99.99%, #D1DBFF 100%); box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.05); padding: 28px 42px; transition: all 0.3s; border-radius: 10px; }
-.main__button:hover, .advantagers__button:hover, .courses__card-button:hover, .form__button:hover, .footer__button:hover { background-color: linear-gradient(94.59deg, #6C22FF 0%, #5B7FFF 99.99%, #D1DBFF 100%); }
+.main__button, .advantagers__button, .courses__card-button, .form__button, .footer__button { font-weight: 700; font-size: 1.875em; letter-spacing: 0.05em; color: #FBFFFF; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); text-decoration: none; background: linear-gradient(94.59deg, #DDCCFF 0%, #B2C3FF 99.99%, #D1DBFF 100%); box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.05); padding: 28px 42px; transition: all 0.3s; border-radius: 10px; transition: all 0.3s; }
+.main__button:hover, .advantagers__button:hover, .courses__card-button:hover, .form__button:hover, .footer__button:hover { background: linear-gradient(94.59deg, #6C22FF 0%, #5B7FFF 99.99%, #D1DBFF 100%); }
 
 .title { font-weight: 700; font-size: 3.125em; line-height: 105%; letter-spacing: 0.05em; color: #FBFFFF; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
 
@@ -46,7 +46,7 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
 .header__menu-mobile li a { text-decoration: none; color: #FBFFFF; }
 .header__menu-mobile.active { transform: translateX(0%); }
 
-.main { background-image: url("../images/backgrounds/1.png"); background-size: cover; padding-bottom: 250px; }
+.main { background-image: url("../images/backgrounds/1.png"); background-position: 100% top; background-repeat: no-repeat; padding-bottom: 240px; }
 .main main { padding: 100px 0px 0px; }
 .main__opportunities { list-style: none; margin-top: 45px; }
 .main__opportunities-item { position: relative; margin-top: 20px; margin-left: 25px; }
@@ -69,11 +69,12 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
 .program { position: relative; padding: 175px 0px 175px; margin-top: -20px; }
 .program__title { text-align: center; }
 .program__cards { display: flex; align-items: stretch; justify-content: space-between; margin-top: 45px; }
-.program__cards-item { background: linear-gradient(94.81deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 100%); border: 1px solid #FBFFFF; padding: 20px 15px; text-align: center; height: auto; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border-radius: 10px; }
-.program__card { min-height: 370px; }
+.program__cards-item { background: linear-gradient(94.81deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 100%); border: 1px solid #FBFFFF; padding: 20px 15px; text-align: center; height: auto; border-radius: 10px; }
+.program__card { min-height: 370px; transition: all 0.3s; }
 .program__card-title { font-weight: 700; font-size: 1.875em; text-align: center; letter-spacing: 0.05em; margin-top: 17px; }
 .program__card-content { font-weight: 400; font-size: 1.125em; line-height: 22px; letter-spacing: 0.05em; color: #5E5E5E; margin-top: 20px; max-width: 308px; }
 .program__card-icon { width: 90px; height: 90px; }
+.program__card:hover { box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); }
 .program__swiper-nav { display: none; z-index: 500; }
 .program .swiper-slide { transform: scale(1); }
 .program .swiper-slide::before { display: none; }
@@ -86,7 +87,7 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
 .courses__subtitle { max-width: 960px; text-align: end; margin-left: auto; margin-top: 50px; }
 .courses__swiper { width: 100%; overflow: hidden; }
 .courses__pagination { display: none; }
-.courses__cards { margin-top: 85px; padding: 50px 0px; }
+.courses__cards { margin-top: 35px; padding: 50px 20px; }
 .courses__cards-item { background: linear-gradient(94.81deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.12) 100%); box-shadow: 0px 0px 46px rgba(0, 0, 0, 0.15), 0px 1px 7px rgba(255, 255, 255, 0.25); backdrop-filter: blur(15px); border-radius: 10px; display: flex; align-items: center; padding-left: 45px; }
 .courses__cards .swiper-slide-active { display: flex; justify-content: center; }
 .courses__card { position: relative; overflow: hidden; }
@@ -122,13 +123,15 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
 .form__input:first-child { margin-top: 0; }
 .form__input::placeholder { color: #9B9B9B; text-transform: uppercase; }
 .form__policity { margin-top: 20px; font-weight: 400; font-size: 15px; line-height: 18px; text-align: center; letter-spacing: 0.05em; color: #939393; }
+.form__policity a { color: #939393; text-decoration-color: #939393; }
 
 .footer { padding-bottom: 90px; }
 .footer__wrapper { border-top: 3px solid white; padding-top: 55px; }
 .footer__content { padding-top: 1px solid white; display: flex; align-items: start; justify-content: space-between; margin-top: 20px; }
 .footer__content ul li { font-weight: 400; font-size: 18px; line-height: 22px; color: rgba(0, 0, 0, 0.7); margin-top: 20px; }
 .footer__content ul li:first-child { margin-top: 0; }
-.footer__content ul li a { font-weight: 400; font-size: 18px; line-height: 22px; color: rgba(0, 0, 0, 0.7); text-decoration: none; }
+.footer__content ul li a { font-weight: 400; font-size: 18px; line-height: 22px; color: rgba(0, 0, 0, 0.7); text-decoration: none; transition: all 0.3s; }
+.footer__content ul li a:hover { background: linear-gradient(94.59deg, #AF87FF 0%, #5B7FFF 99.99%, #D1DBFF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; }
 .footer__content-wrap { display: flex; align-items: start; justify-content: space-between; gap: 90px; }
 .footer__policity { max-width: 380px; margin-top: 50px; font-weight: 400; font-size: 18px; line-height: 22px; letter-spacing: 0.05em; color: rgba(10, 28, 38, 0.7); }
 .footer__contacts { margin-top: 20px; }
@@ -157,7 +160,8 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
   .advantagers__cards { grid-gap: 30px; }
   .advantagers__card-content { max-height: 100%; }
   .advantagers__content { max-width: 550px; }
-  .advantagers__text { font-size: 18px; line-height: 22px; } }
+  .advantagers__text { font-size: 18px; line-height: 22px; }
+  .team__info-title { font-size: 20px; } }
 @media (max-width: 1250px) { .header__menu-mobile { display: flex; }
   .burger { display: block !important; }
   .advantagers__wrapper { flex-direction: column; justify-content: center; }

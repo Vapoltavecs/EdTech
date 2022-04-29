@@ -22,7 +22,25 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   });
   burger.addEventListener("click", () => {
-      menu.classList.toggle('active')
-      burger.classList.toggle('active')
+    menu.classList.toggle("active");
+    burger.classList.toggle("active");
   });
+  const scrollToAnchor = (e) => {
+    const { target } = e;
+    const { href } = target;
+    if (href) {
+      const isAnchor = href.indexOf("#");
+      if (isAnchor !== -1) {
+        console.log(href);
+        e.preventDefault();
+        const id = href.substring(isAnchor + 1);
+        const elem = document.getElementById(id);
+        window.scrollTo({
+          behavior: "smooth",
+          top: elem.getBoundingClientRect().top + document.body.scrollTop,
+        });
+      }
+    }
+  };
+  window.addEventListener("click", scrollToAnchor);
 });
