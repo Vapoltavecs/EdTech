@@ -102,7 +102,7 @@ body
             position: absolute
             background: white
             left: 13%
-            top: 115px
+            top: -105px
             border-radius: 0px 0px 10px 10px
             opacity: 0
             transition: all .3s
@@ -285,6 +285,7 @@ body
         margin-top: 40px
         display: inline-block
         @extend %button
+
     &__cards
         display: grid
         grid-gap: 45px
@@ -316,7 +317,8 @@ body
             display: block
             width: 80px
             height: 80px
-
+    &__button-mobile
+        display: none
 .program
     position: relative
     padding: 175px 0px 175px
@@ -565,6 +567,8 @@ body
         cursor: pointer
         display: inline-block
         margin: 70px auto 0px
+        font-size: 30px
+        padding: 22px 66px
 
         display: flex
     &__input
@@ -678,6 +682,7 @@ body
         margin-left: 10px
         font-family: "Montserrat"
         font-weight: 500
+        margin-top: 2px
 
 .seat
     margin-top: 15px
@@ -686,6 +691,7 @@ body
         margin-left: 10px
         font-family: "Montserrat"
         font-weight: 500
+        margin-top: 3px
 
 .time
     margin-top: 15px
@@ -694,6 +700,7 @@ body
         margin-left: 10px
         font-family: "Montserrat"
         font-weight: 500
+        margin-top: 3px
 
 @media (min-width: 1250px)
     .courses
@@ -949,6 +956,16 @@ body
         &__wrapper
             flex-direction: column
             gap: 30px
+    .advantagers
+        &__button-mobile
+            display: inline-block
+            font-size: 25px
+            padding: 30px 45px
+            max-width: 300px
+            margin: 50px auto
+    .program
+        padding-top: 100px
+        background-position: left 20%
 
 @media (max-width: 650px)
     .container
@@ -974,8 +991,15 @@ body
             grid-template-columns: 1fr
         &__card
             text-align: center
+            padding: 20px
             &-icon
                 margin: 0 auto
+        &__button
+            font-size: 18px
+            padding: 17px
+            text-align: center
+            width: 100%
+
     .program
         padding: 100px 0px
         background-position: center center
@@ -984,15 +1008,23 @@ body
         .container
             padding: 0
         .swiper-slide
-            opacity: 1
-            transform: scale(1) !important
+            opacity: 0.7
+            transform: scale(0.9) !important
             display: flex
             flex-direction: column-reverse
             &::before
                 display: none
+        .swiper-slide-active
+            opacity: 1 !important
+            transform: scale(1) !important
+            background: white
         .swiper__navigation
             display: none
         &__card
+            &-title
+                font-size: 20px
+            &-content
+                font-size: 16px
     .team
         padding: 40px 15px
 
@@ -1148,6 +1180,11 @@ body
                     font-size: 1em
         &__contacts
             margin-top: 20px
+        &__input
+            padding: 25px
+            width: 100%
+            background: linear-gradient(94.81deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.12) 100%)
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), 0px 1px 7px rgba(255, 255, 255, 0.25)
 .cookie-modal
     display: none
     background-color: white

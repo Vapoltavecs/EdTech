@@ -136,6 +136,7 @@
                                 </div>
                             </div>
                         </div>
+                        <a href="/about" class="advantagers__button advantagers__button-mobile">Познакомиться</a>
                     </div>
                 </div>
             </div>
@@ -537,6 +538,12 @@
             centeredSlides: true,
             spaceBetween: 10,
             loop: true,
+            pagination: {
+                el: '.program__pagination',
+                type: 'bullets',
+                clickable: true,
+                bulletActiveClass: 'active'
+            },
             breakpoints: {
                 700: {
                     slidesPerView: 3,
@@ -549,12 +556,7 @@
                         nextEl: '.swiper__program-next',
                         prevEl: '.swiper__program-prev',
                     },
-                    pagination: {
-                        el: '.program__pagination',
-                        type: 'bullets',
-                        clickable: true,
-                        bulletActiveClass: 'active'
-                    },
+                    
                 },
                 1250: {
                     slidesPerView: 4,

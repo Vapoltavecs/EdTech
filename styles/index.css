@@ -20,7 +20,7 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
 .header__menu-item:first-child:hover .dropdown { opacity: 1; top: 135px; }
 .header__menu-link { color: black; font-weight: 400; font-size: 1.5em; line-height: 29px; letter-spacing: 0.05em; text-decoration: none; position: relative; }
 .header__menu-link:hover::before { content: ""; width: 100%; height: 1px; bottom: -5px; position: absolute; background: linear-gradient(94.59deg, #AF87FF 0%, #5B7FFF 99.99%, #D1DBFF 100%); }
-.header__menu .dropdown { padding: 30px; position: absolute; background: white; left: 13%; top: 115px; border-radius: 0px 0px 10px 10px; opacity: 0; transition: all 0.3s; }
+.header__menu .dropdown { padding: 30px; position: absolute; background: white; left: 13%; top: -105px; border-radius: 0px 0px 10px 10px; opacity: 0; transition: all 0.3s; }
 .header__menu .dropdown li { margin-top: 20px; max-width: 380px; }
 .header__menu .dropdown li a { text-decoration: none; font-size: 16px; line-height: 20px; letter-spacing: 0.05em; color: #0A1C26; transition: all 0.3s; }
 .header__menu .dropdown li a:hover { background: linear-gradient(94.59deg, #AF87FF 0%, #5B7FFF 99.99%, #D1DBFF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; }
@@ -65,6 +65,7 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
 .advantagers__card-title { color: #0A1C26; font-size: 1.25em; font-weight: 700; font-family: inherit; letter-spacing: 0.05em; margin-top: 30px; line-height: 22px; }
 .advantagers__card-content { font-weight: 400; font-size: 1em; color: #454748; letter-spacing: 0.05em; margin-top: 20px; max-height: 76px; }
 .advantagers__card-icon { display: block; width: 80px; height: 80px; }
+.advantagers__button-mobile { display: none; }
 
 .program { position: relative; padding: 175px 0px 175px; margin-top: -20px; }
 .program__title { text-align: center; }
@@ -118,7 +119,7 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
 .team__navigate-prev { transform: rotate(180deg); margin-left: 15px; }
 
 .form { padding: 60px; max-width: 675px; background: linear-gradient(94.81deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.12) 100%); box-shadow: 0px 0px 46px rgba(0, 0, 0, 0.15), 0px 1px 7px rgba(255, 255, 255, 0.25); backdrop-filter: blur(15px); border-radius: 10px; }
-.form__button { border: none; cursor: pointer; display: inline-block; margin: 70px auto 0px; display: flex; }
+.form__button { border: none; cursor: pointer; display: inline-block; margin: 70px auto 0px; font-size: 30px; padding: 22px 66px; display: flex; }
 .form__input { width: 100%; display: inline-block; margin-top: 50px; border: none; display: inline-block; border-bottom: 2px solid white; font-size: 1.25em; outline: none; background: none; padding: 15px 20px; }
 .form__input:first-child { margin-top: 0; }
 .form__input::placeholder { color: #9B9B9B; text-transform: uppercase; }
@@ -142,13 +143,13 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
 .footer__mobile { display: none; }
 
 .date { margin-top: 30px; display: flex; align-items: center; }
-.date__text { margin-left: 10px; font-family: "Montserrat"; font-weight: 500; }
+.date__text { margin-left: 10px; font-family: "Montserrat"; font-weight: 500; margin-top: 2px; }
 
 .seat { margin-top: 15px; display: flex; }
-.seat__text { margin-left: 10px; font-family: "Montserrat"; font-weight: 500; }
+.seat__text { margin-left: 10px; font-family: "Montserrat"; font-weight: 500; margin-top: 3px; }
 
 .time { margin-top: 15px; display: flex; }
-.time__text { margin-left: 10px; font-family: "Montserrat"; font-weight: 500; }
+.time__text { margin-left: 10px; font-family: "Montserrat"; font-weight: 500; margin-top: 3px; }
 
 @media (min-width: 1250px) { .courses .swiper-wrapper { transform: none !important; display: flex; align-items: center; justify-content: center; gap: 45px; flex-wrap: wrap; width: 100%; margin-top: 85px; height: 100% !important; }
   .courses .swiper-wrapper .swiper-slide { width: auto !important; }
@@ -216,20 +217,26 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
   .contacts .form { margin-top: 50px; }
   .footer__content-wrap { display: block; }
   .footer__content-item:last-child { margin-top: 50px; } }
-@media (max-width: 1000px) { .team__wrapper { flex-direction: column; gap: 30px; } }
+@media (max-width: 1000px) { .team__wrapper { flex-direction: column; gap: 30px; }
+  .advantagers__button-mobile { display: inline-block; font-size: 25px; padding: 30px 45px; max-width: 300px; margin: 50px auto; }
+  .program { padding-top: 100px; background-position: left 20%; } }
 @media (max-width: 650px) { .container { padding: 0px 15px; }
   .main__button { margin: 35px auto 0px; display: block; padding: 16px 40px; text-align: center; width: 250px; }
   .advantagers { z-index: 500; }
   .advantagers__title { text-align: start; font-size: 23px; line-height: 28px; }
   .advantagers__text { font-size: 1em; margin-top: 30px; text-align: start; }
   .advantagers__cards { grid-template-columns: 1fr; }
-  .advantagers__card { text-align: center; }
+  .advantagers__card { text-align: center; padding: 20px; }
   .advantagers__card-icon { margin: 0 auto; }
+  .advantagers__button { font-size: 18px; padding: 17px; text-align: center; width: 100%; }
   .program { padding: 100px 0px; background-position: center center; background-size: cover; margin-top: 0; }
   .program .container { padding: 0; }
-  .program .swiper-slide { opacity: 1; transform: scale(1) !important; display: flex; flex-direction: column-reverse; }
+  .program .swiper-slide { opacity: 0.7; transform: scale(0.9) !important; display: flex; flex-direction: column-reverse; }
   .program .swiper-slide::before { display: none; }
+  .program .swiper-slide-active { opacity: 1 !important; transform: scale(1) !important; background: white; }
   .program .swiper__navigation { display: none; }
+  .program__card-title { font-size: 20px; }
+  .program__card-content { font-size: 16px; }
   .team { padding: 40px 15px; background: linear-gradient(94.81deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.12) 100%); max-width: 90%; margin: 40px auto; box-shadow: 0px 0px 46px rgba(0, 0, 0, 0.15), 0px 1px 7px rgba(255, 255, 255, 0.25); backdrop-filter: blur(15px); border-radius: 10px; }
   .team__photo-swiper { max-width: 150px; }
   .team__info-swiper { max-width: 310px; margin: 0 auto; }
@@ -272,7 +279,8 @@ body { font-family: "Century Gothic"; background: #D1DBFF; }
   .footer__contacts-links li { margin-top: 10px; }
   .footer__contacts-links li:first-child { margin-top: 0; }
   .footer__contacts-links li a { text-decoration: none; color: black; font-weight: 400; font-size: 1em; }
-  .footer__contacts { margin-top: 20px; } }
+  .footer__contacts { margin-top: 20px; }
+  .footer__input { padding: 25px; width: 100%; background: linear-gradient(94.81deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.12) 100%); box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), 0px 1px 7px rgba(255, 255, 255, 0.25); } }
 .cookie-modal { display: none; background-color: white; max-width: 90%; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 100%; box-shadow: 0px 11px 37px rgba(0, 0, 0, 0.18); border-radius: 10px; z-index: 900; padding: 20px 35px; font-size: 14px; line-height: 17px; text-align: center; }
 .cookie-modal__content { text-align: start; }
 .cookie-modal__btn { display: inline-block; margin: 0 auto; margin-top: 15px; background: none; padding: 7px 47px; border: 1px solid #0B63CA; border-radius: 10px; cursor: pointer; }

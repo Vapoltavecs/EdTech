@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const elem = document.getElementById(id);
         window.scrollTo({
           behavior: "smooth",
-          top: elem.getBoundingClientRect().top + document.body.scrollTop,
+          top: elem.getBoundingClientRect().top + 300 + document.body.scrollTop,
         });
       }
     }
